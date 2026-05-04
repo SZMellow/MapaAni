@@ -14,7 +14,7 @@
 
         <!-- 1. Your login activity must be here -->
         <activity
-            android:name=".loginactivity"
+            android:name=".LoginActivity"
             android:exported="false" />
 
         <activity

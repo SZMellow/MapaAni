@@ -17,14 +17,14 @@ class MainActivity : AppCompatActivity() {
 
         // Set the action for the Farmer button
         btnFarmer.setOnClickListener {
-            val intent = Intent(this, loginactivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
 
         // Set the action for the Buyer button
         btnBuyer.setOnClickListener {
             // This will work once you create BuyerActivity
-            val intent = Intent(this, loginactivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
     }
