@@ -12,14 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MapaAni">
 
-        <!-- 1. Your login activity must be here -->
+        <!-- 1. Added parent activity attributes to LoginActivity -->
         <activity
             android:name=".LoginActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity">
+
+            <!-- Optional: Provides backward compatibility for Android 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
 
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:launchMode="singleTop"> <!-- Add this line -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
