@@ -1,9 +1,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.MapaAni" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-    </style>
+	<!-- Base application theme. -->
+	<style name="Base.Theme.MapaAni" parent="Theme.Material3.DayNight.NoActionBar">
+		<!-- Customize your light theme here. -->
+		<!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+	</style>
 
-    <style name="Theme.MapaAni" parent="Base.Theme.MapaAni" />
+	<style name="Theme.MapaAni" parent="Base.Theme.MapaAni" />
+
+	<style name="HeaderIconCard" parent="Widget.Material3.CardView.Elevated">
+		<item name="android:layout_width">36dp</item>
+		<item name="android:layout_height">36dp</item>
+		<item name="cardBackgroundColor">@color/white</item>
+		<item name="cardCornerRadius">18dp</item>
+		<item name="cardElevation">4dp</item>
+	</style>
 </resources>

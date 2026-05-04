@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/main"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#F8F9FA"
+	tools:context=".MainActivity">
+
+	<!-- Big green head. Round bottom. Shadow for float. -->
+	<LinearLayout
+		android:id="@+id/headerContainer"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/header_bg"
+		android:elevation="8dp"
+		android:orientation="vertical"
+		android:padding="20dp"
+		app:layout_constraintTop_toTopOf="parent">
+
+		<!-- Search box and icons go here -->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="16dp"
+			android:gravity="center_vertical">
+
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="40dp"
+				android:layout_weight="1"
+				android:background="@drawable/search_bar_bg"
+				android:gravity="center_vertical"
+				android:paddingHorizontal="12dp">
+
+				<ImageView
+					android:layout_width="20dp"
+					android:layout_height="20dp"
+					android:src="@drawable/ic_search"
+					android:contentDescription="@null" />
+
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:layout_marginStart="8dp"
+					android:text="@string/search_hint"
+					android:textColor="@color/JadeWhite"
+					android:textSize="14sp" />
+
+				<ImageView
+					android:layout_width="20dp"
+					android:layout_height="20dp"
+					android:src="@drawable/ic_filter"
+					app:tint="@color/black"
+					android:contentDescription="@null" />
+			</LinearLayout>
+
+			<!-- Shiny buttons. Tap for things. -->
+			<com.google.android.material.card.MaterialCardView
+				style="@style/HeaderIconCard"
+				android:layout_marginStart="12dp">
+				<ImageView
+					android:layout_width="20dp"
+					android:layout_height="20dp"
+					android:layout_gravity="center"
+					android:src="@drawable/ic_cart"
+					app:tint="@color/Green2"
+					android:contentDescription="@null" />
+			</com.google.android.material.card.MaterialCardView>
+
+			<com.google.android.material.card.MaterialCardView
+				style="@style/HeaderIconCard"
+				android:layout_marginStart="8dp">
+				<ImageView
+					android:layout_width="20dp"
+					android:layout_height="20dp"
+					android:layout_gravity="center"
+					android:src="@drawable/ic_notifications"
+					app:tint="@color/Green2"
+					android:contentDescription="@null" />
+			</com.google.android.material.card.MaterialCardView>
+
+			<com.google.android.material.card.MaterialCardView
+				style="@style/HeaderIconCard"
+				android:layout_marginStart="8dp">
+				<ImageView
+					android:layout_width="20dp"
+					android:layout_height="20dp"
+					android:layout_gravity="center"
+					android:src="@drawable/ic_account"
+					app:tint="@color/Green2"
+					android:contentDescription="@null" />
+			</com.google.android.material.card.MaterialCardView>
+		</LinearLayout>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="20dp"
+			android:text="@string/greeting_day"
+			android:textColor="@color/white"
+			android:textSize="28sp"
+			android:textStyle="bold" />
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="2dp"
+			android:text="@string/promo_tagline"
+			android:textColor="@color/Green1"
+			android:textSize="13sp"
+			android:textStyle="bold" />
+	</LinearLayout>
+
+	<!-- Scroll list of plants and stuff -->
+	<androidx.core.widget.NestedScrollView
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		app:layout_constraintBottom_toTopOf="@id/bottomNav"
+		app:layout_constraintTop_toBottomOf="@id/headerContainer">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:padding="20dp">
+
+			<!-- Categories. Roots, Leafy, Beans, Gourd. -->
+			<GridLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:alignmentMode="alignMargins"
+				android:columnCount="4">
+
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_columnWeight="1"
+					android:gravity="center"
+					android:orientation="vertical">
+					<include layout="@layout/item_category" android:id="@+id/catRoots" />
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_columnWeight="1"
+					android:gravity="center"
+					android:orientation="vertical">
+					<include layout="@layout/item_category" android:id="@+id/catLeafy" />
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_columnWeight="1"
+					android:gravity="center"
+					android:orientation="vertical">
+					<include layout="@layout/item_category" android:id="@+id/catBeans" />
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_columnWeight="1"
+					android:gravity="center"
+					android:orientation="vertical">
+					<include layout="@layout/item_category" android:id="@+id/catGourd" />
+				</LinearLayout>
+			</GridLayout>
+
+			<!-- Best food show here -->
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="24dp">
+				<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/best_sellers" android:textColor="@color/Green1" android:textSize="18sp" android:textStyle="bold" />
+				<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="View All >" android:textColor="@color/Green1" android:textSize="13sp" android:textStyle="bold" />
+			</RelativeLayout>
+
+			<HorizontalScrollView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="12dp"
+				android:scrollbars="none">
+				<LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+					<include layout="@layout/item_product_card" android:id="@+id/product1" />
+					<include layout="@layout/item_product_card" android:id="@+id/product2" />
+					<include layout="@layout/item_product_card" android:id="@+id/product3" />
+					<include layout="@layout/item_product_card" android:id="@+id/product4" />
+				</LinearLayout>
+			</HorizontalScrollView>
+
+			<!-- Cheap food. Buy now. High shadow. -->
+			<com.google.android.material.card.MaterialCardView
+				android:layout_width="match_parent"
+				android:layout_height="140dp"
+				android:layout_marginTop="24dp"
+				app:cardCornerRadius="24dp"
+				app:cardElevation="6dp">
+
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent">
+
+					<!-- Background Image -->
+					<ImageView
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:scaleType="centerCrop"
+						android:src="@drawable/img_broccoli"
+						android:contentDescription="@null" />
+
+					<!-- Dark overlay for readability -->
+					<View
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:background="#802E4032" />
+
+					<RelativeLayout
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:padding="24dp">
+
+						<ImageView
+							android:layout_width="80dp"
+							android:layout_height="80dp"
+							android:layout_alignParentTop="true"
+							android:layout_alignParentStart="true"
+							android:layout_marginStart="-20dp"
+							android:layout_marginTop="-20dp"
+							android:src="@android:drawable/ic_menu_gallery"
+							app:tint="#41503D"
+							android:alpha="0.2" />
+
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_centerVertical="true"
+							android:orientation="vertical">
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="@string/lower_prices"
+								android:textColor="@color/white"
+								android:textSize="12sp" />
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginTop="4dp"
+								android:text="@string/promo_text"
+								android:textColor="@color/white"
+								android:textSize="28sp"
+								android:textStyle="bold" />
+						</LinearLayout>
+					</RelativeLayout>
+				</RelativeLayout>
+			</com.google.android.material.card.MaterialCardView>
+
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:layout_marginTop="12dp"
+				android:orientation="horizontal">
+				<View android:layout_width="16dp" android:layout_height="4dp" android:layout_margin="2dp" android:background="#41503D" />
+				<View android:layout_width="8dp" android:layout_height="4dp" android:layout_margin="2dp" android:background="#B0B0B0" />
+				<View android:layout_width="8dp" android:layout_height="4dp" android:layout_margin="2dp" android:background="#B0B0B0" />
+				<View android:layout_width="8dp" android:layout_height="4dp" android:layout_margin="2dp" android:background="#B0B0B0" />
+			</LinearLayout>
+
+			<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="@string/recommended" android:textColor="@color/Green1" android:textSize="18sp" android:textStyle="bold" />
+
+			<GridLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:columnCount="2">
+				<LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1">
+					<include layout="@layout/item_product_recommended" android:id="@+id/rec1" />
+				</LinearLayout>
+				<LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1">
+					<include layout="@layout/item_product_recommended" android:id="@+id/rec2" />
+				</LinearLayout>
+			</GridLayout>
+		</LinearLayout>
+	</androidx.core.widget.NestedScrollView>
+
+	<!-- Buttons for move around app. Round top. High shadow. -->
+	<com.google.android.material.bottomnavigation.BottomNavigationView
+		android:id="@+id/bottomNav"
+		android:layout_width="match_parent"
+		android:layout_height="72dp"
+		android:background="@drawable/bottom_nav_bg"
+		android:elevation="16dp"
+		app:backgroundTint="@color/Green2"
+		app:itemIconTint="@color/white"
+		app:itemTextColor="@color/white"
+		app:itemRippleColor="@color/Gree2L"
+		app:labelVisibilityMode="unlabeled"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:menu="@menu/bottom_nav_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

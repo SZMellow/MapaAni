@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Little circle for plant group -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:gravity="center"
+	android:orientation="vertical">
+
+	<com.google.android.material.card.MaterialCardView
+		android:layout_width="64dp"
+		android:layout_height="64dp"
+		app:cardBackgroundColor="#FEF9E7"
+		app:cardCornerRadius="32dp"
+		app:cardElevation="2dp">
+		<ImageView
+			android:id="@+id/categoryImage"
+			android:layout_width="32dp"
+			android:layout_height="32dp"
+			android:layout_gravity="center"
+			android:src="@android:drawable/ic_menu_gallery"
+			app:tint="#D4AC0D"
+			android:contentDescription="@null"
+			tools:src="@drawable/img_potato" />
+	</com.google.android.material.card.MaterialCardView>
+
+	<TextView
+		android:id="@+id/categoryName"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="4dp"
+		android:text="@string/cat_roots"
+		android:textColor="@color/Green1"
+		android:textSize="12sp"
+		tools:text="Roots" />
+</LinearLayout>

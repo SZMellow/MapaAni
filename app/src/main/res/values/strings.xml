@@ -1,3 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">MapaAni</string>
+	<string name="app_name">MapaAni</string>
+	<string name="greeting_day">Magandang Araw</string>
+	<string name="promo_tagline">Extra Harvests From Local Farms To Your Table.</string>
+	<string name="find_fresh_harvests">Find fresh harvests near you</string>
+	<string name="search_hint">Search</string>
+
+	<!-- Categories -->
+	<string name="cat_roots">Roots</string>
+	<string name="cat_leafy">Leafy</string>
+	<string name="cat_beans">Beans</string>
+	<string name="cat_gourd">Gourd</string>
+
+	<!-- Labels -->
+	<string name="best_sellers">Best Sellers</string>
+	<string name="see_all">View All</string>
+	<string name="recommended">Recommended</string>
+	<string name="lower_prices">LOWER PRICES</string>
+	<string name="promo_text">30% OFF</string>
+
+	<!-- Nav -->
+	<string name="nav_home">Home</string>
+	<string name="nav_payments">Payments</string>
+	<string name="nav_add">Add</string>
+	<string name="nav_history">History</string>
+	<string name="nav_support">Support</string>
+
+	<!-- Veggie Prices (Pesos) -->
+	<string name="price_pumpkin">₱85.00</string>
+	<string name="price_tomato">₱60.00</string>
+	<string name="price_broccoli">₱180.00</string>
+	<string name="price_potato">₱90.00</string>
+	<string name="price_cauliflower">₱150.00</string>
+	<string name="price_carrot">₱75.00</string>
+	<string name="price_cabbage">₱70.00</string>
+
+	<!-- Dummy items -->
+	<string name="dummy_price_1">₱103.0</string>
+	<string name="dummy_price_2">₱50.0</string>
+	<string name="dummy_price_3">₱12.99</string>
+	<string name="dummy_price_4">₱10.0</string>
+	<string name="dummy_price_5">₱25.0</string>
 </resources>
