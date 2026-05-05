@@ -7,5 +7,7 @@
     <color name="JadeWhite">#B0B0B0</color>
     <color name="Gree2L">#B9C8B1</color>
     <color name="GreenAlt">#6E8481</color>
+    <color name="RedCancelled">#E53935</color>
+    <color name="TabDark">#364537</color>
     <?xml version="1.0" encoding="utf-8"?>
 </resources>
