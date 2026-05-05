@@ -1,0 +1,130 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Green2">
+
+    <!-- Header Text and Back Arrow -->
+    <ImageView
+        android:id="@+id/backBtn"
+        android:layout_width="32dp"
+    android:layout_height="32dp"
+    android:layout_marginStart="20dp"
+    android:padding="4dp"
+    android:src="@drawable/backarrow"
+    android:scaleType="fitCenter"
+    app:layout_constraintBottom_toBottomOf="@+id/titleTv"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/titleTv"
+    app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="My Orders"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- White Container Card -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/white_card_bg"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNav"
+        app:layout_constraintTop_toBottomOf="@+id/titleTv">
+
+        <!-- Tab Pills Row -->
+        <LinearLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tab_selected"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="8dp"
+                android:text="Active"
+                android:textColor="@color/Green1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:background="@drawable/tab_selected"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="8dp"
+                android:text="Completed"
+                android:alpha="0.6"
+                android:textColor="@color/Green1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tab_selected"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="8dp"
+                android:text="Cancelled"
+                android:alpha="0.6"
+                android:textColor="@color/Green1" />
+        </LinearLayout>
+
+        <!-- Empty State Illustration (image_1c41c4.png graphic) -->
+        <ImageView
+            android:id="@+id/illustration"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/backarrow"
+            app:layout_constraintBottom_toTopOf="@+id/messageTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tabLayout"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:tint="@color/Gree2L" />
+
+        <TextView
+            android:id="@+id/messageTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="You don't have any\nactive orders at this time"
+            android:textColor="@color/Green1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/illustration" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Your Requested Bottom Nav -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@drawable/bottom_nav_bg"
+        android:elevation="16dp"
+        app:backgroundTint="@color/Green2"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:itemRippleColor="@color/Gree2L"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@drawable/bottom_nav_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
