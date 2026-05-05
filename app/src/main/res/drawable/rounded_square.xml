@@ -1,0 +1,3 @@
+<style name="rounded_square">
+    <item name="cornerSize">12dp</item>
+</style>
