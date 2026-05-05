@@ -1,4 +1,33 @@
 <resources>
     <string name="app_name">MapaAni</string>
     <string name="hello">Login</string>
+    <string name="moderator_title">Moderator</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pellentesque congue lorem, vel tincidunt tortor.</string>
+    <string name="view_listings">View Listings</string>
+    <string name="view_chatlog_reports">View chatlog reports</string>
+    <string name="desc_back">Back</string>
+    <string name="desc_home">Home</string>
+    <string name="desc_plate">Plate</string>
+    <string name="desc_heart">Heart</string>
+    <string name="desc_list">List</string>
+    <string name="desc_support">Support</string>
+    <string name="desc_chevron">Chevron</string>
+    <string name="listing_management">listing management</string>
+    <string name="farmer_name">\@FarmerName</string>
+    <string name="urban_greenery">\@UrbanGreenery</string>
+    <string name="potato_details">A0034 - Potato</string>
+    <string name="eggplant_details">A0034 - Eggplant</string>
+    <string name="carrot_details">A0034 - Carrot</string>
+    <string name="status_new">New</string>
+    <string name="status_reported">Reported</string>
+    <string name="pfp_text">PFP</string>
+    <string name="desc_check">Check</string>
+    <string name="desc_close">Close</string>
+    <string name="chat_logs_reports">Chat logs and reports</string>
+    <string name="buyer_name">\@Buyer_Name</string>
+    <string name="seller_braum">\@Seller_Braum</string>
+    <string name="farmer_jim">\@Farmer_Jim</string>
+    <string name="msg1">\"Is this available\"</string>
+    <string name="msg2">\"Add 50PHP\"</string>
+    <string name="msg3">\"{REDACTED CONTACT INFO}\"</string>
 </resources>

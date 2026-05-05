@@ -12,9 +12,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MapaAni">
         <activity
-            android:name=".BoardingActivity"
+            android:name=".moderatorpanel3Chatlogsandreports"
             android:exported="false" />
-        <!-- 1. Added parent activity attributes to LoginActivity -->
+        <activity
+            android:name=".ModeratorPanel2ListingManagement"
+            android:exported="false" />
+        <activity
+            android:name=".ModeratorPanel1"
+            android:exported="false" />
+        <activity
+            android:name=".ModeratorPanel"
+            android:exported="false" />
+        <activity
+            android:name=".BoardingActivity"
+            android:exported="false" /> <!-- 1. Added parent activity attributes to LoginActivity -->
         <activity
             android:name=".LoginActivity"
             android:exported="false"

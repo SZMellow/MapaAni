@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Green2"
+    tools:context=".moderatorpanel3Chatlogsandreports">
+
+    <!-- Top Bar -->
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/desc_back"
+        android:padding="4dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/moderator_title"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Main Content Container -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contentContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_card"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+        <!-- Pill Title -->
+        <TextView
+            android:id="@+id/tvChatLogsReports"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/pill_background"
+            android:paddingHorizontal="32dp"
+            android:paddingVertical="12dp"
+            android:text="@string/chat_logs_reports"
+            android:textColor="#2E1A1A"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/topDivider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginHorizontal="24dp"
+            android:background="#CCCCCC"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvChatLogsReports" />
+
+        <!-- Chat Report Item 1 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/item1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="12dp"
+            app:layout_constraintEnd_toEndOf="@id/topDivider"
+            app:layout_constraintStart_toStartOf="@id/topDivider"
+            app:layout_constraintTop_toBottomOf="@id/topDivider">
+
+            <TextView
+                android:id="@+id/pfp1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/pfp_placeholder"
+                android:gravity="center"
+                android:text="@string/pfp_text"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvName1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="@string/buyer_name"
+                android:textColor="#2E1A1A"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/pfp1"
+                app:layout_constraintTop_toTopOf="@id/pfp1" />
+
+            <TextView
+                android:id="@+id/tvMsg1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/msg1"
+                android:textColor="#555555"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/tvName1"
+                app:layout_constraintTop_toBottomOf="@id/tvName1" />
+
+            <TextView
+                android:id="@+id/tvStatus1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/status_reported"
+                android:textColor="#555555"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/tvName1"
+                app:layout_constraintTop_toBottomOf="@id/tvMsg1" />
+
+            <ImageView
+                android:id="@+id/ivClose1"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:contentDescription="@string/desc_close"
+                android:src="@drawable/ic_close"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivCheck1"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="@string/desc_check"
+                android:src="@drawable/ic_check"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ivClose1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            app:layout_constraintEnd_toEndOf="@id/topDivider"
+            app:layout_constraintStart_toStartOf="@id/topDivider"
+            app:layout_constraintTop_toBottomOf="@id/item1" />
+
+        <!-- Chat Report Item 2 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/item2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="12dp"
+            app:layout_constraintEnd_toEndOf="@id/topDivider"
+            app:layout_constraintStart_toStartOf="@id/topDivider"
+            app:layout_constraintTop_toBottomOf="@id/divider1">
+
+            <TextView
+                android:id="@+id/pfp2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/pfp_placeholder"
+                android:gravity="center"
+                android:text="@string/pfp_text"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvName2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="@string/seller_braum"
+                android:textColor="#2E1A1A"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/pfp2"
+                app:layout_constraintTop_toTopOf="@id/pfp2" />
+
+            <TextView
+                android:id="@+id/tvMsg2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/msg2"
+                android:textColor="#555555"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/tvName2"
+                app:layout_constraintTop_toBottomOf="@id/tvName2" />
+
+            <TextView
+                android:id="@+id/tvStatus2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/status_reported"
+                android:textColor="#555555"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/tvName2"
+                app:layout_constraintTop_toBottomOf="@id/tvMsg2" />
+
+            <ImageView
+                android:id="@+id/ivClose2"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:contentDescription="@string/desc_close"
+                android:src="@drawable/ic_close"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivCheck2"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="@string/desc_check"
+                android:src="@drawable/ic_check"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ivClose2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            app:layout_constraintEnd_toEndOf="@id/topDivider"
+            app:layout_constraintStart_toStartOf="@id/topDivider"
+            app:layout_constraintTop_toBottomOf="@id/item2" />
+
+        <!-- Chat Report Item 3 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/item3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="12dp"
+            app:layout_constraintEnd_toEndOf="@id/topDivider"
+            app:layout_constraintStart_toStartOf="@id/topDivider"
+            app:layout_constraintTop_toBottomOf="@id/divider2">
+
+            <TextView
+                android:id="@+id/pfp3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/pfp_placeholder"
+                android:gravity="center"
+                android:text="@string/pfp_text"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvName3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="@string/farmer_jim"
+                android:textColor="#2E1A1A"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/pfp3"
+                app:layout_constraintTop_toTopOf="@id/pfp3" />
+
+            <TextView
+                android:id="@+id/tvMsg3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/msg3"
+                android:textColor="#555555"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/tvName3"
+                app:layout_constraintTop_toBottomOf="@id/tvName3" />
+
+            <TextView
+                android:id="@+id/tvStatus3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/status_reported"
+                android:textColor="#555555"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/tvName3"
+                app:layout_constraintTop_toBottomOf="@id/tvMsg3" />
+
+            <ImageView
+                android:id="@+id/ivClose3"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:contentDescription="@string/desc_close"
+                android:src="@drawable/ic_close"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivCheck3"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="@string/desc_check"
+                android:src="@drawable/ic_check"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ivClose3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            app:layout_constraintEnd_toEndOf="@id/topDivider"
+            app:layout_constraintStart_toStartOf="@id/topDivider"
+            app:layout_constraintTop_toBottomOf="@id/item3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bottom_nav_bg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/desc_home"
+            android:src="@drawable/ic_home"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/desc_plate"
+            android:src="@drawable/ic_plate"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/desc_heart"
+            android:src="@drawable/ic_heart"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/desc_list"
+            android:src="@drawable/ic_list"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/desc_support"
+            android:src="@drawable/ic_support"
+            app:tint="@color/white" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
