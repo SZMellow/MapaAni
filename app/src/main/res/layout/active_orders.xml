@@ -94,7 +94,7 @@
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_marginTop="100dp"
-            android:src="@drawable/Backarrow"
+            android:src="@drawable/backarrow"
             android:scaleType="fitCenter"
             app:tint="@color/Gree2L"
 
@@ -118,23 +118,5 @@
             app:layout_constraintEnd_toEndOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <!-- Bottom Nav (FRONT LAYER) -->
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNav"
-        android:layout_width="match_parent"
-        android:layout_height="72dp"
-        android:background="@drawable/bottom_nav_bg"
-
-        android:elevation="24dp"
-        android:translationZ="24dp"
-
-        app:backgroundTint="@color/Green2"
-        app:itemIconTint="@color/white"
-        app:itemTextColor="@color/white"
-        app:itemRippleColor="@color/Gree2L"
-        app:labelVisibilityMode="unlabeled"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@drawable/bottom_nav_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

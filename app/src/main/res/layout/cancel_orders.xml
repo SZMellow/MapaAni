@@ -94,7 +94,7 @@
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_marginTop="100dp"
-            android:src="@drawable/Backarrow"
+            android:src="@drawable/backarrow"
             android:scaleType="fitCenter"
             app:tint="@color/Gree2L"
 

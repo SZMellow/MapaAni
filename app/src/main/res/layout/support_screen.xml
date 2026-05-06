@@ -14,7 +14,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:background="@android:color/transparent"
-        android:src="@drawable/ic_back"
+        android:src="@drawable/backarrow"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,7 +38,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/rounded_card"
-        app:layout_constraintBottom_toTopOf="@id/inputBar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTitle">
 
         <ScrollView
@@ -74,16 +74,16 @@
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:padding="12dp"
-        app:layout_constraintBottom_toTopOf="@id/tabBar">
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageButton
             android:id="@+id/btnAttach"
             android:layout_width="36dp"
             android:layout_height="36dp"
-            android:background="@drawable/circle_white"
+            android:background="@drawable/rounded_square"
             android:backgroundTint="@color/white"
             android:padding="8dp"
-            android:src="@drawable/ic_attach"
+            android:src="@android:drawable/ic_input_add"
             app:tint="@color/Green2" />
 
         <EditText
@@ -98,76 +98,18 @@
             android:hint="Write Here..."
             android:paddingHorizontal="16dp"
             android:textColor="@color/black"
-            android:textColorHint="@color/gray"
+            android:textColorHint="@color/hint_text"
             android:textSize="13sp" />
 
         <ImageButton
             android:id="@+id/btnSend"
             android:layout_width="36dp"
             android:layout_height="36dp"
-            android:background="@drawable/circle_white"
+            android:background="@drawable/rounded_square"
             android:backgroundTint="@color/white"
             android:padding="8dp"
-            android:src="@drawable/ic_send"
+            android:src="@android:drawable/ic_menu_send"
             app:tint="@color/Green2" />
-    </LinearLayout>
-
-    <!-- Bottom Tab Bar -->
-    <LinearLayout
-        android:id="@+id/tabBar"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@color/Green2"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:weightSum="5"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <ImageButton
-            android:id="@+id/tabHome"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:scaleType="centerInside"
-            android:src="@drawable/ic_home" />
-
-        <ImageButton
-            android:id="@+id/tabCart"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:scaleType="centerInside"
-            android:src="@drawable/ic_cart" />
-
-        <ImageButton
-            android:id="@+id/tabFavorite"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:scaleType="centerInside"
-            android:src="@drawable/ic_favorite" />
-
-        <ImageButton
-            android:id="@+id/tabOrders"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:scaleType="centerInside"
-            android:src="@drawable/ic_orders" />
-
-        <ImageButton
-            android:id="@+id/tabSupport"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:scaleType="centerInside"
-            android:src="@drawable/ic_support" />
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

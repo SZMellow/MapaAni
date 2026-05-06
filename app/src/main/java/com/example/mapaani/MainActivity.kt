@@ -5,27 +5,31 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
+
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Find buttons by their ID from your activity_main.xml
-        val btnFarmer = findViewById<Button>(R.id.button)
-        val btnBuyer = findViewById<Button>(R.id.button2)
+        supportActionBar?.hide()
 
-        // Set the action for the Farmer button
-        btnFarmer.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
-        }
+        val navView: BottomNavigationView = findViewById(R.id.bottom_navigation)
+        val navHostFragment = supportFragmentManager
+            .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navController = navHostFragment.navController
 
-        // Set the action for the Buyer button
-        btnBuyer.setOnClickListener {
-            // This will work once you create BuyerActivity
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
+        navView.setupWithNavController(navController)
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            if (destination.id == R.id.splashFragment) {
+                navView.visibility = android.view.View.GONE
+            } else {
+                navView.visibility = android.view.View.VISIBLE
+            }
         }
     }
 }

@@ -17,4 +17,10 @@
     <string name="promo_lower_prices">LOWER PRICES</string>
     <string name="promo_discount">30% OFF</string>
     <string name="rating_default">5.0</string>
+
+    <string name="boarding_next">Next</string>
+    <string name="boarding_skip">Skip</string>
+    <string name="boarding_get_started">Get Started</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
