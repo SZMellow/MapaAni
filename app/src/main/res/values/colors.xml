@@ -9,5 +9,11 @@
     <color name="GreenAlt">#6E8481</color>
     <color name="RedCancelled">#E53935</color>
     <color name="TabDark">#364537</color>
-    <?xml version="1.0" encoding="utf-8"?>
+
+    <!-- Material 3 Refactor Colors -->
+    <color name="cream">#F5F3ED</color>
+    <color name="pale_yellow">#FFF9C4</color>
+    <color name="primary_green">#507A59</color>
+    <color name="dark_green">#3A4E40</color>
+    <color name="hint_text">#8A7D73</color>
 </resources>
